@@ -9,6 +9,8 @@ Run the latest version of the [Elastic stack][elk-stack] with Docker and Docker 
 It gives you the ability to analyze any data set by using the searching/aggregation capabilities of Elasticsearch and
 the visualization power of Kibana.
 
+![Animated demo](https://user-images.githubusercontent.com/3299086/140621647-2c06e2e6-81fc-4052-96b8-626b9d5f011f.gif)
+
 *:information_source: The Docker images backing this stack include [X-Pack][xpack] with [paid features][paid-features]
 enabled by default (see [How to disable paid features](#how-to-disable-paid-features) to disable them). **The [trial
 license][trial-license] is valid for 30 days**. After this license expires, you can continue using the free features
@@ -308,8 +310,11 @@ containers: [Configuring Logstash for Docker][ls-docker].
 
 ### How to disable paid features
 
-Switch the value of Elasticsearch's `xpack.license.self_generated.type` option from `trial` to `basic` (see [License
+Switch the value of Elasticsearch's `xpack.license.self_generated.type` setting from `trial` to `basic` (see [License
 settings][trial-license]).
+
+You can also cancel an ongoing trial before its expiry date — and thus revert to a basic license — either from the
+[License Management][license-mngmt] panel of Kibana, or using Elasticsearch's [Licensing APIs][license-apis].
 
 ### How to scale out the Elasticsearch cluster
 
@@ -423,6 +428,8 @@ instead of `elasticsearch`.*
 [xpack]: https://www.elastic.co/what-is/open-x-pack
 [paid-features]: https://www.elastic.co/subscriptions
 [trial-license]: https://www.elastic.co/guide/en/elasticsearch/reference/current/license-settings.html
+[license-mngmt]: https://www.elastic.co/guide/en/kibana/current/managing-licenses.html
+[license-apis]: https://www.elastic.co/guide/en/elasticsearch/reference/current/licensing-apis.html
 
 [elastdocker]: https://github.com/sherifabdlnaby/elastdocker
 
