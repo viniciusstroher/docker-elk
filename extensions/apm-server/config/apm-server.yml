@@ -1,8 +1,22 @@
 apm-server:
   host: 0.0.0.0:8200
-
+  auth:
+    api_key:
+      enabled: true 
+    api_key:
+      limit: 50 
 output:
   elasticsearch:
     hosts: ['http://elasticsearch:9200']
     username: elastic
     password: changeme
+
+# logging.level: info
+# logging.to_files: true
+# logging.files:
+#   path: /var/log/apm-server
+#   name: apm-server
+#   keepfiles: 7
+#   permissions: 0644
+apm-server.kibana.enabled: true
+apm-server.kibana.host: "http://kibana:5601"
